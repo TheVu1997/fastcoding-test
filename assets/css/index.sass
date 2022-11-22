@@ -9,6 +9,14 @@ $gold: #cba37c
 
 a
     text-decoration: none
+@media (max-width:992px)
+    p
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 4
+        line-clamp: 4
+        -webkit-box-orient: vertical
 
 body
     margin: 0 !important
@@ -482,7 +490,7 @@ body
                     height: 100%
             .left__content
                 width: 100%
-                h3
+                p
                     font-size: 15px
                     line-height: 24px
                     color: #ffffff
@@ -501,7 +509,7 @@ body
                     height: 100%
             .right__content
                 width: 100%
-                h3
+                p
                     font-size: 15px
                     line-height: 24px
                     color: #ffffff
@@ -644,7 +652,7 @@ body
                     max-width: 50px
                     width: 100%
                 .left__content
-                    h3
+                    p
                         font-size: 13px
                         line-height: 17px
             .info__right
@@ -652,7 +660,7 @@ body
                     max-width: 50px
                     width: 100%
                 .right__content
-                    h3
+                    p
                         font-size: 13px
                         line-height: 17px
 @media (min-width: 767px)
@@ -726,7 +734,7 @@ body
                     font-size: 150px
         .blog__text
             h4
-                font-size: 20px
+                font-size: 16px
                 line-height: 0px
         .blog__list
             display: grid
@@ -746,12 +754,12 @@ body
             padding: 50px 0 50px 0
             .info__left
                 .left__content
-                    h3
+                    p
                         font-size: 12px
                         line-height: 20px
             .info__right
                 .right__content
-                    h3
+                    p
                         font-size: 12px
                         line-height: 20px
     .footer
@@ -798,7 +806,7 @@ body
             grid-template-columns: repeat(1, 1fr)
             .list__item
                 height: 100%
-                min-height: 200px
+                min-height: 230px
                 .item__logo
                     max-width: 70px
                     width: 100%
@@ -851,3 +859,22 @@ body
                                 p
                                     font-size: 13px
                                     line-height: 17px
+    .blog
+        .blog__text
+            h4
+                font-size: 10px
+        .blog__logo
+            margin-bottom: 40px
+        .blog__list
+            .list__item
+                margin-bottom: 20px
+                .item__logo
+                    min-height: 130px
+    .info
+        .wrap
+            .info__left
+                flex-direction: column
+                margin-right: 0
+            .info__right
+                flex-direction: column
+                margin-right: 0
