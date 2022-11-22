@@ -1,7 +1,7 @@
 $gold: #cba37c
-
+@import ./_breakpoint.sass
 .container
-    max-width: 1100px
+    max-width: 1170px
     padding-left: 35px
     padding-right: 35px
     margin: 0 auto
@@ -41,6 +41,10 @@ body
             display: flex
             justify-content: space-between
             align-items: center
+            @include min-md
+                display: flex
+            @include md
+                display: none
             .header__logo
                 flex: 1
             .header__menu
@@ -54,6 +58,8 @@ body
                         font-family: "Myriad Pro"
                         text-align: center
                         padding-right: 30px
+                        @include lg
+                            font-size: 15px
                         a
                             color: white
                             transition: all 0.3s ease-out
@@ -61,6 +67,8 @@ body
                                 color: $gold
             .header__contact
                 letter-spacing: 10px
+                @include lg
+                    letter-spacing: 5px
                 a
                     color: white
                     transition: all 0.3s ease-out
@@ -91,6 +99,10 @@ body
                 .btn__span:after
                     top: -18px
         .header__mobile
+            @include min-md
+                display: none
+            @include md
+                display: flex
             .header__logo
                 flex: 1
             .header__menu
@@ -133,6 +145,14 @@ body
                 top: 0
                 right: 0
                 width: 50%
+                @include md
+                    display: block
+                    position: fixed
+                    top: 0
+                    right: 0
+                    width: 118px
+                    background-color: #686868
+                    height: 14%
                 .btn__span
                     position: absolute
                     right: 0
@@ -190,6 +210,11 @@ body
                 // font-family: "Gotham"
                 text-align: center
                 margin-bottom: 0
+                @include lg
+                    font-size: 80px
+                @include sm
+                    font-size: 40px
+                    letter-spacing: 0
 
         .text__des
 
@@ -205,10 +230,14 @@ body
                 // font-family: "Gotham"
                 text-align: center
                 margin: 0
-
+                @include lg
+                    font-size: 13px
+                    letter-spacing: 9px
+                @include sm
+                    font-size: 9px
+                    letter-spacing: 3px
     .banner__btn
         .btn__title
-
             h4
                 font-size: 15px
                 line-height: 22px
@@ -216,6 +245,11 @@ body
                 font-weight: 400
                 font-family: "Open Sans"
                 text-align: center
+                @include lg
+                    font-size: 13px
+                @include sm
+                    font-size: 10px
+                    line-height: 0
         .btn__arrow
             opacity: 1
             max-width: 65px
@@ -229,6 +263,16 @@ body
             margin: 0 auto
             cursor: pointer
             transition: all .3s ease-out
+            @include lg
+                max-width: 50px
+                width: 100%
+                min-height: 50px
+                height: 100%
+            @include sm
+                max-width: 35px
+                width: 100%
+                min-height: 35px
+                height: 100%
             &:hover
                 border: 1px solid $gold
             .btn__scroll-down
@@ -236,6 +280,11 @@ body
                 background: transparent
                 padding-top: 41%
                 cursor: pointer
+                @include lg
+                    padding-top: 32%
+                img
+                    @include sm
+                        width: 62%
 
 .feature
     padding-top: 100px
@@ -244,13 +293,16 @@ body
     position: relative
     height: auto
     background-color: #11749e
+    @include md
+        padding-bottom: 100px
+    @include sm
+        padding-bottom: 50px
     .feature__logo
         display: flex
         justify-content: center
         align-items: center
         margin-bottom: 90px
         .logo__title
-
             h2
                 width: 100%
                 font-size: 38px
@@ -260,7 +312,12 @@ body
                 font-weight: 500
                 // font-family: "Gotham"
                 text-align: center
-
+                @include lg
+                    font-size: 28px
+                @include md
+                    font-size: 25px
+                @include sm
+                    font-size: 12px
         .logo__main
             position: absolute
             h3
@@ -272,12 +329,27 @@ body
                 font-family: "Roboto"
                 text-align: center
                 margin: 0
+                @include lg
+                    font-size: 190px
+                @include md
+                    font-size: 150px
+                @include sm
+                    font-size: 85px
+
     .feature__list
         display: grid
         grid-template-columns: repeat(4, 1fr)
         gap: 25px
+        @include lg
+            gap: 20px
+        @include md
+            grid-template-columns: repeat(2, 1fr)
         .list__item
             text-align: -webkit-center
+            margin-bottom: 70px
+            @include sm
+                height: 100%
+                min-height: 230px
             .item__logo
                 max-width: 133px
                 width: 100%
@@ -289,6 +361,23 @@ body
                 justify-content: center
                 align-items: center
                 margin-bottom: 80px
+                @include lg
+                    max-width: 100px
+                    width: 100%
+                    max-height: 100px
+                    height: 100%
+                    margin-bottom: 20px
+                @include md
+                    height: 100%
+                    max-height: 100px
+                @include sm
+                    max-width: 70px
+                    width: 100%
+                    max-height: 70px
+                    height: 100%
+                img
+                    @include lg
+                        width: 22%
             .item__title
                 h2
                     font-size: 18px
@@ -298,6 +387,11 @@ body
                     font-weight: 500
                     // font-family: "Gotham"
                     text-align: center
+                    @include lg
+                        font-size: 12px
+                    @include sm
+                        font-size: 10px
+                        line-height: 10px
             .item__des
                 p
                     max-width: 300px
@@ -307,7 +401,11 @@ body
                     color: #ffffff
                     // font-family: "Gotham"
                     text-align: center
-
+                    @include lg
+                        font-size: 11px
+                    @include sm
+                        font-size: 10px
+                        line-height: 20px
 .category
     .container.under
         max-width: 100%
@@ -316,23 +414,39 @@ body
         .category__under
             .under__text
                 display: flex
+                @include md
+                    flex-direction: column-reverse
                 .text__content
                     width: 50%
                     display: flex
                     justify-content: center
                     flex-direction: column
+                    @include md
+                        width: 100%
                     .wrap
                         max-width: 470px
                         width: 100%
                         margin-left: auto
                         margin-right: 0
                         padding-right: 95px
+                        @include lg
+                            width: 64%
+                        @include md
+                            margin-left: 0
+                            margin-right: 0
+                            padding-left: 65px
+                        @include sm
+                            padding-left: 15px
+                            padding-right: 15px
                         .content__calendar
                             h4
                                 font-size: 13px
                                 line-height: 24px
                                 color: #fff
                                 // font-family: "Gotham"
+                                @include sm
+                                    font-size: 10px
+                                    line-height: 0
                         .content__title
                             h3
                                 font-size: 25px
@@ -341,14 +455,25 @@ body
                                 color: #fff
                                 font-weight: 500
                                 // font-family: "Gotham"
+                                @include sm
+                                    font-size: 20px
+                                    line-height: 20px
                         .content__des
                             p
                                 font-size: 15px
                                 line-height: 24px
                                 color: #ffffff
                                 // font-family: "Gotham"
+                                @include lg
+                                    font-size: 13px
+                                    line-height: 17px
+                                @include sm
+                                    font-size: 10px
+                                    line-height: 17px
                 .text__images
                     width: 50%
+                    @include md
+                        width: 100%
                     img
                         width: 100%
                         height: 100%
@@ -360,24 +485,40 @@ body
             .above__text
                 display: flex
                 flex-direction: row-reverse
+                @include md
+                    flex-direction: column-reverse
                 .text__content
                     width: 50%
                     display: flex
                     justify-content: center
                     flex-direction: column
                     background-color: #f3f3f3
+                    @include md
+                        width: 100%
                     .wrap
                         max-width: 470px
                         width: 100%
                         margin-left: 0
                         margin-right: auto
                         padding-left: 95px
+                        @include lg
+                            width: 64%
+                        @include md
+                            margin-left: 0
+                            margin-right: 0
+                            padding-left: 65px
+                        @include sm
+                            padding-left: 15px
+                            padding-right: 15px
                         .content__calendar
                             h4
                                 font-size: 13px
                                 line-height: 24px
                                 color: #222222
                                 // font-family: "Gotham"
+                                @include sm
+                                    font-size: 10px
+                                    line-height: 0
                         .content__title
                             h3
                                 font-size: 25px
@@ -386,14 +527,25 @@ body
                                 color: #222222
                                 font-weight: 500
                                 // font-family: "Gotham"
+                                @include sm
+                                    font-size: 20px
+                                    line-height: 20px
                         .content__des
                             p
                                 font-size: 15px
                                 line-height: 24px
                                 color: #222222
                                 // font-family: "Gotham"
+                                @include lg
+                                    font-size: 13px
+                                    line-height: 17px
+                                @include sm
+                                    font-size: 10px
+                                    line-height: 17px
                 .text__images
                     width: 50%
+                    @include md
+                        width: 100%
                     img
                         width: 100%
                         height: 100%
@@ -410,6 +562,8 @@ body
         justify-content: center
         align-items: center
         margin-bottom: 90px
+        @include sm
+            margin-bottom: 40px
         .logo__title
 
             h2
@@ -421,6 +575,11 @@ body
                 font-weight: 500
                 // font-family: "Gotham"
                 text-align: center
+                @include lg
+                    font-size: 30px
+                    line-height: 45px
+                @include md
+                    font-size: 25px
 
         .logo__main
             position: absolute
@@ -433,7 +592,10 @@ body
                 font-family: "Roboto"
                 text-align: center
                 margin: 0
-
+                @include lg
+                    font-size: 190px
+                @include md
+                    font-size: 150px
     .blog__text
         h4
             font-size: 30px
@@ -442,18 +604,38 @@ body
             // font-family: "Gotham"
             text-align: center
             font-weight: 400
+            @include md
+                font-size: 16px
+                line-height: 0px
+            @include sm
+                font-size: 10px
     .blog__list
         display: grid
         grid-template-columns: repeat(4, 1fr)
         gap: 25px
+        @include lg
+            gap: 20px
+        @include md
+            grid-template-columns: repeat(2, 1fr)
         .list__item
             text-align: -webkit-center
+            @include sm
+                margin-bottom: 20px
             .item__logo
                 width: 100%
                 max-width: 270px
-                min-height: 280px
+                max-height: 270px
+                height: 100%
+                @include lg
+                    width: 100%
+                    max-width: 175px
+                    max-height: 175px
+                    height: 100%
+                @include sm
+                    min-height: 130px
                 img
                     width: 100%
+                    height: 100%
             .item__title
                 h2
                     font-size: 18px
@@ -462,6 +644,11 @@ body
                     color: #11749e
                     font-weight: 500
                     text-align: center
+                    @include lg
+                        font-size: 15px
+                        line-height: 32px
+                    @include md
+                        font-size: 14px
             .item__des
                 p
                     font-size: 15px
@@ -469,22 +656,37 @@ body
                     color: #222222
                     font-family: "Gotham"
                     text-align: center
+                    @include lg
+                        font-size: 13px
+                        line-height: 22px
+                    @include md
+                        font-size: 11px
+                        line-height: 20px
 
 .info
     background-color: #11749e
     .wrap
         display: flex
         padding: 100px 0 100px 0
+        @include md
+            display: block
+            padding: 50px 0 50px 0
         .info__left
             display: flex
             justify-content: center
             align-items: center
             margin-right: 80px
+            @include sm
+                flex-direction: column
+                margin-right: 0
             .left__logo
                 max-width: 69px
                 width: 100%
                 min-height: 69px
                 padding-right: 30px
+                @include lg
+                    max-width: 50px
+                    width: 100%
                 img
                     width: 100%
                     height: 100%
@@ -495,15 +697,27 @@ body
                     line-height: 24px
                     color: #ffffff
                     font-family: "Gotham"
+                    @include lg
+                        font-size: 13px
+                        line-height: 17px
+                    @include md
+                        font-size: 12px
+                        line-height: 20px
         .info__right
             display: flex
             justify-content: center
             align-items: center
+            @include sm
+                flex-direction: column
+                margin-right: 0
             .right__logo
                 max-width: 69px
                 width: 100%
                 min-height: 69px
                 padding-right: 30px
+                @include lg
+                    max-width: 50px
+                    width: 100%
                 img
                     width: 100%
                     height: 100%
@@ -514,6 +728,12 @@ body
                     line-height: 24px
                     color: #ffffff
                     font-family: "Gotham"
+                    @include lg
+                        font-size: 13px
+                        line-height: 17px
+                    @include md
+                        font-size: 12px
+                        line-height: 20px
 
 .footer
     background: url('../images/Layer 97.png')
@@ -528,6 +748,9 @@ body
             font-weight: 400
             font-family: "Roboto"
             margin: 0
+            @include md
+                font-size: 10px
+                line-height: 10px
 @media (max-width: 1124px)
     .category
         .container.under
@@ -544,337 +767,340 @@ body
                             width: 70%
 
 @media (max-width: 992px)
-    .header
-        .inner
-            .header__pc
-                .header__menu
-                    .menu__item
-                        li
-                            font-size: 15px
-                .header__contact
-                    letter-spacing: 5px
-    .banner
-        .banner__text
-            .text__title
-                h2
-                    font-size: 80px
-            .text__des
-                h3
-                    font-size: 13px
-                    letter-spacing: 9px
-        .banner__btn
-            .btn__arrow
-                max-width: 50px
-                width: 100%
-                min-height: 50px
-                height: 100%
-            .btn__title
-                h4
-                    font-size: 13px
-    .feature
-        .feature__logo
-            .logo__title
-                h2
-                    font-size: 28px
-            .logo__main
-                h3
-                    font-size: 190px
-        .feature__list
-            gap: 20px
-            .list__item
-                .item__logo
-                    max-width: 100px
-                    width: 100%
-                    max-height: 100px
-                    height: 100%
-                    margin-bottom: 20px
-                    img
-                        width: 22%
-                .item__title
-                    h2
-                        font-size: 12px
-                .item__des
-                    p
-                        font-size: 11px
-    .category
-        .container.under
-            .category__under
-                .under__text
-                    .text__content
-                        .wrap
-                            width: 64%
-                            .content__des
-                                p
-                                    font-size: 13px
-                                    line-height: 17px
-        .container.above
-            .category__above
-                .above__text
-                    .text__content
-                        .wrap
-                            width: 64%
-                            .content__des
-                                p
-                                    font-size: 13px
-                                    line-height: 17px
-    .blog
-        .blog__logo
-            .logo__title
-                h2
-                    font-size: 30px
-                    line-height: 45px
-            .logo__main
-                h3
-                    font-size: 190px
-        .blog__text
-            h4
-                font-size: 25px
-                line-height: 10px
-        .blog__list
-            gap: 20px
-            .list__item
-                .item__logo
-                    width: 100%
-                    max-width: 175px
-                    min-height: 200px
-                .item__title
-                    h2
-                        font-size: 15px
-                        line-height: 32px
-                .item__des
-                    p
-                        font-size: 13px
-                        line-height: 22px
-    .info
-        .wrap
-            .info__left
-                .left__logo
-                    max-width: 50px
-                    width: 100%
-                .left__content
-                    p
-                        font-size: 13px
-                        line-height: 17px
-            .info__right
-                .right__logo
-                    max-width: 50px
-                    width: 100%
-                .right__content
-                    p
-                        font-size: 13px
-                        line-height: 17px
+    // .header
+    //     .inner
+    //         .header__pc
+    //             .header__menu
+    //                 .menu__item
+    //                     li
+    //                         font-size: 15px
+    //             .header__contact
+    //                 letter-spacing: 5px
+
+    // .banner
+    //     .banner__text
+    //         .text__title
+    //             h2
+    //                 font-size: 80px
+    //         .text__des
+    //             h3
+    //                 font-size: 13px
+    //                 letter-spacing: 9px
+    //     .banner__btn
+    //         .btn__arrow
+    //             max-width: 50px
+    //             width: 100%
+    //             min-height: 50px
+    //             height: 100%
+    //         .btn__title
+    //             h4
+    //                 font-size: 13px
+    // .feature
+    //     .feature__logo
+    //         .logo__title
+    //             h2
+    //                 font-size: 28px
+    //         .logo__main
+    //             h3
+    //                 font-size: 190px
+    //     .feature__list
+    //         gap: 20px
+    //         .list__item
+    //             .item__logo
+    //                 max-width: 100px
+    //                 width: 100%
+    //                 max-height: 100px
+    //                 height: 100%
+    //                 margin-bottom: 20px
+    //                 img
+    //                     width: 22%
+    //             .item__title
+    //                 h2
+    //                     font-size: 12px
+    //             .item__des
+    //                 p
+    //                     font-size: 11px
+    // .category
+    //     .container.under
+    //         .category__under
+    //             .under__text
+    //                 .text__content
+    //                     .wrap
+    //                         width: 64%
+    //                         .content__des
+    //                             p
+    //                                 font-size: 13px
+    //                                 line-height: 17px
+    //     .container.above
+    //         .category__above
+    //             .above__text
+    //                 .text__content
+    //                     .wrap
+    //                         width: 64%
+    //                         .content__des
+    //                             p
+    //                                 font-size: 13px
+    //                                 line-height: 17px
+    // .blog
+    //     .blog__logo
+    //         .logo__title
+    //             h2
+    //                 font-size: 30px
+    //                 line-height: 45px
+    //         .logo__main
+    //             h3
+    //                 font-size: 190px
+    //     .blog__text
+    //         h4
+    //             font-size: 25px
+    //             line-height: 10px
+    //     .blog__list
+    //         gap: 20px
+    //         .list__item
+    //             .item__logo
+    //                 width: 100%
+    //                 max-width: 175px
+    //                 min-height: 200px
+    //             .item__title
+    //                 h2
+    //                     font-size: 15px
+    //                     line-height: 32px
+    //             .item__des
+    //                 p
+    //                     font-size: 13px
+    //                     line-height: 22px
+    // .info
+    //     .wrap
+    //         .info__left
+    //             .left__logo
+    //                 max-width: 50px
+    //                 width: 100%
+    //             .left__content
+    //                 p
+    //                     font-size: 13px
+    //                     line-height: 17px
+    //         .info__right
+    //             .right__logo
+    //                 max-width: 50px
+    //                 width: 100%
+    //             .right__content
+    //                 p
+    //                     font-size: 13px
+    //                     line-height: 17px
 @media (min-width: 767px)
-    .header
-        .inner
-            .header__pc
-                display: flex
-            .header__mobile
-                display: none
+    // .header
+    //     .inner
+    //         .header__pc
+    //             display: flex
+    //         .header__mobile
+    //             display: none
 
 @media (max-width: 767px)
-    .header
-        .inner
-            .header__pc
-                display: none
-            .header__mobile
-                display: flex
-                .header__btn
-                    display: block
-                    position: fixed
-                    top: 0
-                    right: 0
-                    width: 50%
-    .feature
-        .feature__logo
-            .logo__title
-                h2
-                    font-size: 25px
-            .logo__main
-                h3
-                    font-size: 150px
-        .feature__list
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            .list__item
-                height: 100%
-                min-height: 280px
-    .category
-        .container.under
-            .category__under
-                .under__text
-                    .text__content
-                        .wrap
-                            margin-left: 0
-                            margin-right: 0
-                            padding-left: 65px
-                            .content__des
-                                p
-                                    font-size: 13px
-                                    line-height: 17px
-        .container.above
-            .category__above
-                .above__text
-                    .text__content
-                        .wrap
-                            margin-left: 0
-                            margin-right: 0
-                            padding-left: 65px
-                            .content__des
-                                p
-                                    font-size: 13px
-                                    line-height: 17px
-    .blog
-        .blog__logo
-            .logo__title
-                h2
-                    font-size: 25px
-                    line-height: 45px
-            .logo__main
-                h3
-                    font-size: 150px
-        .blog__text
-            h4
-                font-size: 16px
-                line-height: 0px
-        .blog__list
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
-            .list__item
-                .item__title
-                    h2
-                        font-size: 14px
-                        line-height: 32px
-                .item__des
-                    p
-                        font-size: 11px
-                        line-height: 20px
-    .info
-        .wrap
-            display: block
-            padding: 50px 0 50px 0
-            .info__left
-                .left__content
-                    p
-                        font-size: 12px
-                        line-height: 20px
-            .info__right
-                .right__content
-                    p
-                        font-size: 12px
-                        line-height: 20px
-    .footer
-        .footer__main
-            p
-                font-size: 10px
-                line-height: 0
+    // .header
+    //     .inner
+    //         .header__pc
+    //             display: none
+    //         .header__mobile
+    //             display: flex
+    //             .header__btn
+    //                 display: block
+    //                 position: fixed
+    //                 top: 0
+    //                 right: 0
+    //                 width: 118px
+    //                 background-color: #686868
+    //                 height: 14%
+    // .feature
+    //     .feature__logo
+    //         .logo__title
+    //             h2
+    //                 font-size: 25px
+    //         .logo__main
+    //             h3
+    //                 font-size: 150px
+    //     .feature__list
+    //         display: grid
+    //         grid-template-columns: repeat(2, 1fr)
+    //         .list__item
+    //             height: 100%
+    //             min-height: 280px
+    // .category
+    //     .container.under
+    //         .category__under
+    //             .under__text
+    //                 .text__content
+    //                     .wrap
+    //                         margin-left: 0
+    //                         margin-right: 0
+    //                         padding-left: 65px
+    //                         .content__des
+    //                             p
+    //                                 font-size: 13px
+    //                                 line-height: 17px
+    //     .container.above
+    //         .category__above
+    //             .above__text
+    //                 .text__content
+    //                     .wrap
+    //                         margin-left: 0
+    //                         margin-right: 0
+    //                         padding-left: 65px
+    //                         .content__des
+    //                             p
+    //                                 font-size: 13px
+    //                                 line-height: 17px
+    // .blog
+    //     .blog__logo
+    //         .logo__title
+    //             h2
+    //                 font-size: 25px
+    //                 line-height: 45px
+    //         .logo__main
+    //             h3
+    //                 font-size: 150px
+    //     .blog__text
+    //         h4
+    //             font-size: 16px
+    //             line-height: 0px
+    //     .blog__list
+    //         display: grid
+    //         grid-template-columns: repeat(2, 1fr)
+    //         .list__item
+    //             .item__title
+    //                 h2
+    //                     font-size: 14px
+    //                     line-height: 32px
+    //             .item__des
+    //                 p
+    //                     font-size: 11px
+    //                     line-height: 20px
+    // .info
+    //     .wrap
+    //         display: block
+    //         padding: 50px 0 50px 0
+    //         .info__left
+    //             .left__content
+    //                 p
+    //                     font-size: 12px
+    //                     line-height: 20px
+    //         .info__right
+    //             .right__content
+    //                 p
+    //                     font-size: 12px
+    //                     line-height: 20px
+    // .footer
+    //     .footer__main
+    //         p
+    //             font-size: 10px
+    //             line-height: 0
 
 @media (max-width: 480px)
-    .banner
-        .banner__text
-            .text__title
-                h2
-                    font-size: 40px
-                    letter-spacing: 0
-            .text__des
-                h3
-                    font-size: 9px
-                    letter-spacing: 3px
-        .banner__btn
-            .btn__title
-                h4
-                    font-size: 10px
-                    line-height: 0
-            .btn__arrow
-                max-width: 35px
-                width: 100%
-                min-height: 35px
-                height: 100%
-                .btn__scroll-down
-                    padding-top: 32%
-                    img
-                        width: 62%
-    .feature
-        .feature__logo
-            .logo__title
-                h2
-                    font-size: 12px
-            .logo__main
-                h3
-                    font-size: 85px
-        .feature__list
-            display: grid
-            grid-template-columns: repeat(1, 1fr)
-            .list__item
-                height: 100%
-                min-height: 230px
-                .item__logo
-                    max-width: 70px
-                    width: 100%
-                    max-height: 70px
-                    height: 100%
-                .item__title
-                    font-size: 10px
-                    line-height: 10px
-                .item__des
-                    font-size: 10px
-                    line-height: 20px
-    .category
-        .container.under
-            .category__under
-                .under__text
-                    display: flex
-                    flex-direction: column-reverse
-                    .text__images
-                        width: 100%
-                    .text__content
-                        width: 100%
-                        .wrap
-                            padding-left: 15px
-                            padding-right: 15px
-                            .content__calendar
-                                h4
-                                    font-size: 10px
-                                    line-height: 0
-                            .content__title
-                                h3
-                                    font-size: 20px
-                                    line-height: 20px
-                            .content__des
-                                p
-                                    font-size: 10px
-                                    line-height: 17px
-        .container.above
-            .category__above
-                .above__text
-                    display: flex
-                    flex-direction: column-reverse
-                    .text__images
-                        width: 100%
-                    .text__content
-                        width: 100%
-                        .wrap
-                            padding-left: 15px
-                            padding-right: 15px
-                            .content__des
-                                p
-                                    font-size: 13px
-                                    line-height: 17px
-    .blog
-        .blog__text
-            h4
-                font-size: 10px
-        .blog__logo
-            margin-bottom: 40px
-        .blog__list
-            .list__item
-                margin-bottom: 20px
-                .item__logo
-                    min-height: 130px
-    .info
-        .wrap
-            .info__left
-                flex-direction: column
-                margin-right: 0
-            .info__right
-                flex-direction: column
-                margin-right: 0
+    // .banner
+    //     .banner__text
+    //         .text__title
+    //             h2
+    //                 font-size: 40px
+    //                 letter-spacing: 0
+    //         .text__des
+    //             h3
+    //                 font-size: 9px
+    //                 letter-spacing: 3px
+    //     .banner__btn
+    //         .btn__title
+    //             h4
+    //                 font-size: 10px
+    //                 line-height: 0
+    //         .btn__arrow
+    //             max-width: 35px
+    //             width: 100%
+    //             min-height: 35px
+    //             height: 100%
+    //             .btn__scroll-down
+    //                 padding-top: 32%
+    //                 img
+    //                     width: 62%
+    // .feature
+    //     .feature__logo
+    //         .logo__title
+    //             h2
+    //                 font-size: 12px
+    //         .logo__main
+    //             h3
+    //                 font-size: 85px
+    //     .feature__list
+    //         display: grid
+    //         grid-template-columns: repeat(1, 1fr)
+    //         .list__item
+    //             height: 100%
+    //             min-height: 230px
+    //             .item__logo
+    //                 max-width: 70px
+    //                 width: 100%
+    //                 max-height: 70px
+    //                 height: 100%
+    //             .item__title
+    //                 font-size: 10px
+    //                 line-height: 10px
+    //             .item__des
+    //                 font-size: 10px
+    //                 line-height: 20px
+    // .category
+    //     .container.under
+    //         .category__under
+    //             .under__text
+    //                 display: flex
+    //                 flex-direction: column-reverse
+    //                 .text__images
+    //                     width: 100%
+    //                 .text__content
+    //                     width: 100%
+    //                     .wrap
+    //                         padding-left: 15px
+    //                         padding-right: 15px
+    //                         .content__calendar
+    //                             h4
+    //                                 font-size: 10px
+    //                                 line-height: 0
+    //                         .content__title
+    //                             h3
+    //                                 font-size: 20px
+    //                                 line-height: 20px
+    //                         .content__des
+    //                             p
+    //                                 font-size: 10px
+    //                                 line-height: 17px
+    //     .container.above
+    //         .category__above
+    //             .above__text
+    //                 display: flex
+    //                 flex-direction: column-reverse
+    //                 .text__images
+    //                     width: 100%
+    //                 .text__content
+    //                     width: 100%
+    //                     .wrap
+    //                         padding-left: 15px
+    //                         padding-right: 15px
+    //                         .content__des
+    //                             p
+    //                                 font-size: 13px
+    //                                 line-height: 17px
+    // .blog
+    //     .blog__text
+    //         h4
+    //             font-size: 10px
+    //     .blog__logo
+    //         margin-bottom: 40px
+    //     .blog__list
+    //         .list__item
+    //             margin-bottom: 20px
+    //             .item__logo
+    //                 min-height: 130px
+    // .info
+    //     .wrap
+    //         .info__left
+    //             flex-direction: column
+    //             margin-right: 0
+    //         .info__right
+    //             flex-direction: column
+    //             margin-right: 0
