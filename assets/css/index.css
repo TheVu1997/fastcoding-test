@@ -47,6 +47,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0 10px 0;
 }
 @media (min-width: 767px) {
   .header .inner .header__pc {
@@ -76,6 +77,7 @@ body {
 @media (max-width: 992px) {
   .header .inner .header__pc .header__menu .menu__item li {
     font-size: 15px;
+    padding-right: 17px;
   }
 }
 .header .inner .header__pc .header__menu .menu__item li a {

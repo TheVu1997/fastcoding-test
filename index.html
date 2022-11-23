@@ -398,11 +398,11 @@
 
             $(function () {
                 $("#toggle").click(function () {
-                    if ($(".header__menu").width() == "0") {
-                        $(".header__menu").animate({ "width": "100%" });
+                    if ($("#header__menu").width() == "0") {
+                        $("#header__menu").animate({ "width": "100%" });
                         $(this).addClass("active");
                     } else {
-                        $(".header__menu").animate({ "width": "0" });
+                        $("#header__menu").animate({ "width": "0" });
                         $(this).removeClass("active");
                     }
                 });
