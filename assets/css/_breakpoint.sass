@@ -1,0 +1,22 @@
+$xs: 360px,
+$sm: 480px,
+$md: 767px,
+$lg: 992px,
+
+
+
+@mixin lg
+    @media (max-width: $lg)
+        @content
+@mixin md
+    @media (max-width: $md)
+        @content
+@mixin min-md
+    @media (min-width: $md)
+        @content
+@mixin sm
+    @media (max-width: $sm)
+        @content
+@mixin xs
+    @media (max-width: $xs)
+        @content
