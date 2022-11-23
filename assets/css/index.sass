@@ -1,5 +1,5 @@
-$gold: #cba37c
 @import ./_breakpoint.sass
+@import ./_color.sass
 .container
     max-width: 1170px
     padding-left: 35px
@@ -9,7 +9,7 @@ $gold: #cba37c
 
 a
     text-decoration: none
-@media (max-width:992px)
+@media (max-width:1248px)
     p
         overflow: hidden
         text-overflow: ellipsis
@@ -21,18 +21,18 @@ a
 body
     margin: 0 !important
     min-height: 100%
-    color: #fff
+    color: $white
     line-height: 1.7
     padding: 0
     min-width: 320px
-    background-color: #171717
+    background-color: $black
     font-size: 14px
     font-family: 'Gotham', 'Verdana', sans-serif
     overflow-x: hidden
 .main
     position: relative
 .header
-    border-bottom: 1px solid #483939
+    border-bottom: 1px solid $brown-light
     position: absolute
     z-index: 10
     width: 100%
@@ -55,7 +55,7 @@ body
                     li
                         list-style: none
                         font-size: 20px
-                        color: #ffffff
+                        color: $white
                         font-family: "Myriad Pro"
                         text-align: center
                         padding-right: 30px
@@ -93,7 +93,7 @@ body
                     left: 0
                     right: 0
                     height: 1px
-                    background-color: #fff
+                    background-color: $white
                     -webkit-transition: all .2s ease-out
                     transition: all .2s ease-out
                 .btn__span:before
@@ -116,7 +116,7 @@ body
                 right: 0
                 letter-spacing: 2px
                 padding: 60px 0 0 0
-                background: #686868
+                background: $gray
                 height: 100vh
                 transition: all 0.3s ease-out
                 .menu__item
@@ -125,7 +125,7 @@ body
                     li
                         list-style: none
                         font-size: 20px
-                        color: #ffffff
+                        color: $white
                         font-family: "Myriad Pro"
                         text-align: center
                         padding-right: 60px
@@ -153,7 +153,7 @@ body
                     top: 0
                     right: 0
                     width: 118px
-                    background-color: #686868
+                    background-color: $gray
                     height: 14%
                 .btn__span
                     position: absolute
@@ -169,7 +169,7 @@ body
                     left: 0
                     right: 41px
                     height: 1px
-                    background-color: #fff
+                    background-color: $white
                     -webkit-transition: all .2s ease-out
                     transition: all .2s ease-out
                 .btn__span:before
@@ -186,7 +186,7 @@ body
                     transform: rotate(-45deg)
                     top: 0
                 .btn__span
-                    color: #686868
+                    color: $gray
 
 .banner
     background: url(../images/Layer96.png)
@@ -206,7 +206,7 @@ body
                 font-size: 153px
                 letter-spacing: -8px
                 text-transform: uppercase
-                color: #f5f5f5
+                color: $white-light
                 font-weight: bold
                 line-height: initial
                 // font-family: "Gotham"
@@ -227,7 +227,7 @@ body
                 letter-spacing: 19px
                 line-height: 0px
                 text-transform: uppercase
-                color: #11749e
+                color: $blue
                 font-weight: 500
                 // font-family: "Gotham"
                 text-align: center
@@ -243,7 +243,7 @@ body
             h4
                 font-size: 15px
                 line-height: 22px
-                color: #ffffff
+                color: $white
                 font-weight: 400
                 font-family: "Open Sans"
                 text-align: center
@@ -260,7 +260,7 @@ body
             height: 100%
             border-radius: 33px
             background-color: rgba(128,128,128,0)
-            border: 1px solid #ffffff
+            border: 1px solid $white
             text-align: center
             margin: 0 auto
             cursor: pointer
@@ -294,7 +294,7 @@ body
     width: 100%
     position: relative
     height: auto
-    background-color: #11749e
+    background-color: $blue
     @include md
         padding-bottom: 100px
     @include sm
@@ -310,7 +310,7 @@ body
                 font-size: 38px
                 line-height: 45px
                 text-transform: uppercase
-                color: #ffffff
+                color: $white
                 font-weight: 500
                 // font-family: "Gotham"
                 text-align: center
@@ -326,7 +326,7 @@ body
                 opacity: 0.180
                 font-size: 247px
                 line-height: 211px
-                color: #ffffff
+                color: $white
                 font-weight: bold
                 font-family: "Roboto"
                 text-align: center
@@ -358,7 +358,7 @@ body
                 max-height: 133px
                 height: 100%
                 border-radius: 66px
-                background-color: #2e85aa
+                background-color: $blue-light
                 display: flex
                 justify-content: center
                 align-items: center
@@ -385,7 +385,7 @@ body
                     font-size: 18px
                     line-height: 36px
                     text-transform: uppercase
-                    color: #ffffff
+                    color: $white
                     font-weight: 500
                     // font-family: "Gotham"
                     text-align: center
@@ -400,7 +400,7 @@ body
                     width: 100%
                     font-size: 15px
                     line-height: 24px
-                    color: #ffffff
+                    color: $white
                     // font-family: "Gotham"
                     text-align: center
                     @include lg
@@ -436,7 +436,7 @@ body
                         @include md
                             margin-left: 0
                             margin-right: 0
-                            padding-left: 65px
+                            padding: 20px
                         @include sm
                             padding-left: 15px
                             padding-right: 15px
@@ -444,7 +444,7 @@ body
                             h4
                                 font-size: 13px
                                 line-height: 24px
-                                color: #fff
+                                color: $white
                                 // font-family: "Gotham"
                                 @include sm
                                     font-size: 10px
@@ -454,7 +454,7 @@ body
                                 font-size: 25px
                                 line-height: 36px
                                 text-transform: uppercase
-                                color: #fff
+                                color: $white
                                 font-weight: 500
                                 // font-family: "Gotham"
                                 @include sm
@@ -464,7 +464,7 @@ body
                             p
                                 font-size: 15px
                                 line-height: 24px
-                                color: #ffffff
+                                color: $white
                                 // font-family: "Gotham"
                                 @include lg
                                     font-size: 13px
@@ -494,7 +494,7 @@ body
                     display: flex
                     justify-content: center
                     flex-direction: column
-                    background-color: #f3f3f3
+                    background-color: $white-light
                     @include md
                         width: 100%
                     .wrap
@@ -508,7 +508,7 @@ body
                         @include md
                             margin-left: 0
                             margin-right: 0
-                            padding-left: 65px
+                            padding: 20px
                         @include sm
                             padding-left: 15px
                             padding-right: 15px
@@ -516,7 +516,7 @@ body
                             h4
                                 font-size: 13px
                                 line-height: 24px
-                                color: #222222
+                                color: $black-light
                                 // font-family: "Gotham"
                                 @include sm
                                     font-size: 10px
@@ -526,7 +526,7 @@ body
                                 font-size: 25px
                                 line-height: 36px
                                 text-transform: uppercase
-                                color: #222222
+                                color: $black-light
                                 font-weight: 500
                                 // font-family: "Gotham"
                                 @include sm
@@ -536,7 +536,7 @@ body
                             p
                                 font-size: 15px
                                 line-height: 24px
-                                color: #222222
+                                color: $black-light
                                 // font-family: "Gotham"
                                 @include lg
                                     font-size: 13px
@@ -558,7 +558,7 @@ body
     width: 100%
     position: relative
     height: auto
-    background-color: #ffffff
+    background-color: $white
     .blog__logo
         display: flex
         justify-content: center
@@ -573,7 +573,7 @@ body
                 font-size: 38px
                 line-height: 45px
                 text-transform: uppercase
-                color: #222222
+                color: $black-light
                 font-weight: 500
                 // font-family: "Gotham"
                 text-align: center
@@ -589,7 +589,7 @@ body
                 opacity: 0.180
                 font-size: 247px
                 line-height: 211px
-                color: #222222
+                color: $black-light
                 font-weight: bold
                 font-family: "Roboto"
                 text-align: center
@@ -601,14 +601,12 @@ body
     .blog__text
         h4
             font-size: 30px
-            line-height: 37px
-            color: #222222
+            color: $black-light
             // font-family: "Gotham"
             text-align: center
             font-weight: 400
             @include md
                 font-size: 16px
-                line-height: 0px
             @include sm
                 font-size: 10px
     .blog__list
@@ -643,7 +641,7 @@ body
                     font-size: 18px
                     line-height: 36px
                     text-transform: uppercase
-                    color: #11749e
+                    color: $blue
                     font-weight: 500
                     text-align: center
                     @include lg
@@ -655,21 +653,22 @@ body
                 p
                     font-size: 15px
                     line-height: 24px
-                    color: #222222
+                    color: $black-light
                     font-family: "Gotham"
                     text-align: center
                     @include lg
-                        font-size: 13px
+                        font-size: 15px
                         line-height: 22px
                     @include md
-                        font-size: 11px
+                        font-size: 14px
                         line-height: 20px
 
 .info
-    background-color: #11749e
+    background-color: $blue
     .wrap
         display: flex
         padding: 100px 0 100px 0
+        gap: 20px 80px
         @include md
             display: block
             padding: 50px 0 50px 0
@@ -677,10 +676,11 @@ body
             display: flex
             justify-content: center
             align-items: center
-            margin-right: 80px
+            max-width: 532px
             @include sm
                 flex-direction: column
                 margin-right: 0
+                margin-bottom: 40px
             .left__logo
                 max-width: 69px
                 width: 100%
@@ -695,20 +695,21 @@ body
             .left__content
                 width: 100%
                 p
-                    font-size: 15px
+                    font-size: 20px
                     line-height: 24px
-                    color: #ffffff
+                    color: $white
                     font-family: "Gotham"
                     @include lg
-                        font-size: 13px
+                        font-size: 16px
                         line-height: 17px
                     @include md
-                        font-size: 12px
+                        font-size: 13px
                         line-height: 20px
         .info__right
             display: flex
             justify-content: center
             align-items: center
+            max-width: 532px
             @include sm
                 flex-direction: column
                 margin-right: 0
@@ -726,15 +727,15 @@ body
             .right__content
                 width: 100%
                 p
-                    font-size: 15px
+                    font-size: 20px
                     line-height: 24px
-                    color: #ffffff
+                    color: $white
                     font-family: "Gotham"
                     @include lg
-                        font-size: 13px
+                        font-size: 16px
                         line-height: 17px
                     @include md
-                        font-size: 12px
+                        font-size: 13px
                         line-height: 20px
 
 .footer
@@ -746,7 +747,7 @@ body
             font-size: 13px
             letter-spacing: 0px
             line-height: 36px
-            color: #ffffff
+            color: $white
             font-weight: 400
             font-family: "Roboto"
             margin: 0
@@ -767,342 +768,3 @@ body
                     .text__content
                         .wrap
                             width: 70%
-
-@media (max-width: 992px)
-    // .header
-    //     .inner
-    //         .header__pc
-    //             .header__menu
-    //                 .menu__item
-    //                     li
-    //                         font-size: 15px
-    //             .header__contact
-    //                 letter-spacing: 5px
-
-    // .banner
-    //     .banner__text
-    //         .text__title
-    //             h2
-    //                 font-size: 80px
-    //         .text__des
-    //             h3
-    //                 font-size: 13px
-    //                 letter-spacing: 9px
-    //     .banner__btn
-    //         .btn__arrow
-    //             max-width: 50px
-    //             width: 100%
-    //             min-height: 50px
-    //             height: 100%
-    //         .btn__title
-    //             h4
-    //                 font-size: 13px
-    // .feature
-    //     .feature__logo
-    //         .logo__title
-    //             h2
-    //                 font-size: 28px
-    //         .logo__main
-    //             h3
-    //                 font-size: 190px
-    //     .feature__list
-    //         gap: 20px
-    //         .list__item
-    //             .item__logo
-    //                 max-width: 100px
-    //                 width: 100%
-    //                 max-height: 100px
-    //                 height: 100%
-    //                 margin-bottom: 20px
-    //                 img
-    //                     width: 22%
-    //             .item__title
-    //                 h2
-    //                     font-size: 12px
-    //             .item__des
-    //                 p
-    //                     font-size: 11px
-    // .category
-    //     .container.under
-    //         .category__under
-    //             .under__text
-    //                 .text__content
-    //                     .wrap
-    //                         width: 64%
-    //                         .content__des
-    //                             p
-    //                                 font-size: 13px
-    //                                 line-height: 17px
-    //     .container.above
-    //         .category__above
-    //             .above__text
-    //                 .text__content
-    //                     .wrap
-    //                         width: 64%
-    //                         .content__des
-    //                             p
-    //                                 font-size: 13px
-    //                                 line-height: 17px
-    // .blog
-    //     .blog__logo
-    //         .logo__title
-    //             h2
-    //                 font-size: 30px
-    //                 line-height: 45px
-    //         .logo__main
-    //             h3
-    //                 font-size: 190px
-    //     .blog__text
-    //         h4
-    //             font-size: 25px
-    //             line-height: 10px
-    //     .blog__list
-    //         gap: 20px
-    //         .list__item
-    //             .item__logo
-    //                 width: 100%
-    //                 max-width: 175px
-    //                 min-height: 200px
-    //             .item__title
-    //                 h2
-    //                     font-size: 15px
-    //                     line-height: 32px
-    //             .item__des
-    //                 p
-    //                     font-size: 13px
-    //                     line-height: 22px
-    // .info
-    //     .wrap
-    //         .info__left
-    //             .left__logo
-    //                 max-width: 50px
-    //                 width: 100%
-    //             .left__content
-    //                 p
-    //                     font-size: 13px
-    //                     line-height: 17px
-    //         .info__right
-    //             .right__logo
-    //                 max-width: 50px
-    //                 width: 100%
-    //             .right__content
-    //                 p
-    //                     font-size: 13px
-    //                     line-height: 17px
-@media (min-width: 767px)
-    // .header
-    //     .inner
-    //         .header__pc
-    //             display: flex
-    //         .header__mobile
-    //             display: none
-
-@media (max-width: 767px)
-    // .header
-    //     .inner
-    //         .header__pc
-    //             display: none
-    //         .header__mobile
-    //             display: flex
-    //             .header__btn
-    //                 display: block
-    //                 position: fixed
-    //                 top: 0
-    //                 right: 0
-    //                 width: 118px
-    //                 background-color: #686868
-    //                 height: 14%
-    // .feature
-    //     .feature__logo
-    //         .logo__title
-    //             h2
-    //                 font-size: 25px
-    //         .logo__main
-    //             h3
-    //                 font-size: 150px
-    //     .feature__list
-    //         display: grid
-    //         grid-template-columns: repeat(2, 1fr)
-    //         .list__item
-    //             height: 100%
-    //             min-height: 280px
-    // .category
-    //     .container.under
-    //         .category__under
-    //             .under__text
-    //                 .text__content
-    //                     .wrap
-    //                         margin-left: 0
-    //                         margin-right: 0
-    //                         padding-left: 65px
-    //                         .content__des
-    //                             p
-    //                                 font-size: 13px
-    //                                 line-height: 17px
-    //     .container.above
-    //         .category__above
-    //             .above__text
-    //                 .text__content
-    //                     .wrap
-    //                         margin-left: 0
-    //                         margin-right: 0
-    //                         padding-left: 65px
-    //                         .content__des
-    //                             p
-    //                                 font-size: 13px
-    //                                 line-height: 17px
-    // .blog
-    //     .blog__logo
-    //         .logo__title
-    //             h2
-    //                 font-size: 25px
-    //                 line-height: 45px
-    //         .logo__main
-    //             h3
-    //                 font-size: 150px
-    //     .blog__text
-    //         h4
-    //             font-size: 16px
-    //             line-height: 0px
-    //     .blog__list
-    //         display: grid
-    //         grid-template-columns: repeat(2, 1fr)
-    //         .list__item
-    //             .item__title
-    //                 h2
-    //                     font-size: 14px
-    //                     line-height: 32px
-    //             .item__des
-    //                 p
-    //                     font-size: 11px
-    //                     line-height: 20px
-    // .info
-    //     .wrap
-    //         display: block
-    //         padding: 50px 0 50px 0
-    //         .info__left
-    //             .left__content
-    //                 p
-    //                     font-size: 12px
-    //                     line-height: 20px
-    //         .info__right
-    //             .right__content
-    //                 p
-    //                     font-size: 12px
-    //                     line-height: 20px
-    // .footer
-    //     .footer__main
-    //         p
-    //             font-size: 10px
-    //             line-height: 0
-
-@media (max-width: 480px)
-    // .banner
-    //     .banner__text
-    //         .text__title
-    //             h2
-    //                 font-size: 40px
-    //                 letter-spacing: 0
-    //         .text__des
-    //             h3
-    //                 font-size: 9px
-    //                 letter-spacing: 3px
-    //     .banner__btn
-    //         .btn__title
-    //             h4
-    //                 font-size: 10px
-    //                 line-height: 0
-    //         .btn__arrow
-    //             max-width: 35px
-    //             width: 100%
-    //             min-height: 35px
-    //             height: 100%
-    //             .btn__scroll-down
-    //                 padding-top: 32%
-    //                 img
-    //                     width: 62%
-    // .feature
-    //     .feature__logo
-    //         .logo__title
-    //             h2
-    //                 font-size: 12px
-    //         .logo__main
-    //             h3
-    //                 font-size: 85px
-    //     .feature__list
-    //         display: grid
-    //         grid-template-columns: repeat(1, 1fr)
-    //         .list__item
-    //             height: 100%
-    //             min-height: 230px
-    //             .item__logo
-    //                 max-width: 70px
-    //                 width: 100%
-    //                 max-height: 70px
-    //                 height: 100%
-    //             .item__title
-    //                 font-size: 10px
-    //                 line-height: 10px
-    //             .item__des
-    //                 font-size: 10px
-    //                 line-height: 20px
-    // .category
-    //     .container.under
-    //         .category__under
-    //             .under__text
-    //                 display: flex
-    //                 flex-direction: column-reverse
-    //                 .text__images
-    //                     width: 100%
-    //                 .text__content
-    //                     width: 100%
-    //                     .wrap
-    //                         padding-left: 15px
-    //                         padding-right: 15px
-    //                         .content__calendar
-    //                             h4
-    //                                 font-size: 10px
-    //                                 line-height: 0
-    //                         .content__title
-    //                             h3
-    //                                 font-size: 20px
-    //                                 line-height: 20px
-    //                         .content__des
-    //                             p
-    //                                 font-size: 10px
-    //                                 line-height: 17px
-    //     .container.above
-    //         .category__above
-    //             .above__text
-    //                 display: flex
-    //                 flex-direction: column-reverse
-    //                 .text__images
-    //                     width: 100%
-    //                 .text__content
-    //                     width: 100%
-    //                     .wrap
-    //                         padding-left: 15px
-    //                         padding-right: 15px
-    //                         .content__des
-    //                             p
-    //                                 font-size: 13px
-    //                                 line-height: 17px
-    // .blog
-    //     .blog__text
-    //         h4
-    //             font-size: 10px
-    //     .blog__logo
-    //         margin-bottom: 40px
-    //     .blog__list
-    //         .list__item
-    //             margin-bottom: 20px
-    //             .item__logo
-    //                 min-height: 130px
-    // .info
-    //     .wrap
-    //         .info__left
-    //             flex-direction: column
-    //             margin-right: 0
-    //         .info__right
-    //             flex-direction: column
-    //             margin-right: 0
